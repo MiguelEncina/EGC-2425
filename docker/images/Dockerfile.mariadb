@@ -1,5 +1,7 @@
-FROM mariadb:latest
+FROM mariadb:3.11
 
 RUN apt-get update && \
     apt-get install -y mariadb-client && \
+    apt-get install -y net-tools && \
+    apt-get install -y iputils-ping && \
     rm -rf /var/lib/apt/lists/*
